@@ -290,8 +290,8 @@ class _CNVPlot():
         return go.FigureWidget(data=data_to_plot, layout=layout)
 
 
-cnr = pd.read_csv('data/tumor.merged.cnr', sep='\t')
-seg = pd.read_csv('data/tumor.merged.cns', sep='\t')
+cnr = pd.read_csv('data/sample_cnvkit.cnr', sep='\t')
+seg = pd.read_csv('data/sample_cnvkit.cns', sep='\t')
 
 app = dash.Dash(__name__)
 

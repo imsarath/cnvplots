@@ -1,7 +1,7 @@
 # cnvplots
 Python web application to create interactive copy number variation plots
 
-# required python packages
+### Required python packages
 ```
 Numpy
 Pandas
@@ -9,7 +9,7 @@ plotly
 dash
 ```
 
-# To run
+### To run
 
 ```
 git clone https://github.com/imsarath/cnvplots.git
