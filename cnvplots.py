@@ -155,6 +155,8 @@ class _CNVPlot():
 
         xmin = min(self.data[self.pos].values)
         xmax = max(self.data[self.pos].values)
+        ymin = min(self.data[self.log2].values)
+        ymax = max(self.data[self.log2].values)
 
         data_to_plot = []
         tmp = pd.DataFrame()
@@ -181,7 +183,7 @@ class _CNVPlot():
                         text=highlight_hover_text,
                         marker=dict(
                             color=highlight_color,
-                            size=10
+                            size=20
                         ),
                         name="Regions of interest"
                     )
@@ -206,7 +208,7 @@ class _CNVPlot():
                     'range': [xmin, xmax],
                 },
                 yaxis={'title': ylabel,
-                       'range': [-2, 2]},
+                       'range': [ymin, ymax]},
                 hovermode='closest'
             )
 
@@ -245,7 +247,7 @@ class _CNVPlot():
                     'ticks': "outside"
                 },
                 yaxis={'title': ylabel,
-                       'range': [-2, 2]},
+                       'range': [ymin, ymax]},
                 hovermode='closest'
             )
 
