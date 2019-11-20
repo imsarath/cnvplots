@@ -1,4 +1,4 @@
-dash
-numpy
-dash_bio
-pandas
+dash>=1.6.0
+dash_bio>=0.4.1
+numpy>=1.17.4
+pandas>=0.25.3
