@@ -1,6 +1,12 @@
 # cnvplots
 Python web application to create interactive copy number variation plots
 
+*Note*: *This module inspired from dash-bio Manhantan plot*
+
+### Input 
+
+cnvkit output files such as copy number ratio(.cnr) and segmentation (.cns) files. Dash and Plotly used to build this interactive cnv plots and tables. 
+
 ### How To run this app
 
 ```
