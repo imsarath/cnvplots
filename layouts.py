@@ -28,11 +28,12 @@ def layout(cnr):
                 selected_rows=[],
                 page_action="native",
                 page_current=0,
-                page_size=20,
+                page_size=10,
             )
-        ], style={'padding': 40}),
-        html.Br(),
-        html.Br()
+        ], style={'padding': 40,
+                  'width': 1000,
+                  'margin-left': 'auto',
+                  'margin-right': 'auto'}),
     ])
 
     return layout

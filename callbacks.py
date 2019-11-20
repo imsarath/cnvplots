@@ -1,6 +1,8 @@
 import pandas as pd
-from dash.dependencies import Input, Output
 import dash_core_components as dcc
+from dash.dependencies import Input, Output
+from dash.exceptions import PreventUpdate
+
 
 from cnvplots import CNVPlot
 
@@ -19,8 +21,11 @@ def update_callback(dashapp, cnr, seg):
             derived_virtual_selected_rows = []
             highlight = False
 
-        return dcc.Graph(id='example-graph',
-                         figure=CNVPlot(cnr_df,
-                                        seg,
-                                        derived_virtual_selected_rows,
-                                        highlight=highlight))
+        if cnr_df.empty:
+            raise PreventUpdate
+        else:
+            return dcc.Graph(id='example-graph',
+                             figure=CNVPlot(cnr_df,
+                                            seg,
+                                            derived_virtual_selected_rows,
+                                            highlight=highlight))

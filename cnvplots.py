@@ -45,7 +45,6 @@ def CNVPlot(cnr,
         col=None)
 
 
-
 class _CNVPlot():
     """docstring for CNVPlot"""
     def __init__(self,
