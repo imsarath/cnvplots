@@ -11,6 +11,7 @@ cnr = pd.read_csv('data/sample_cnvkit.cnr', sep='\t')
 seg = pd.read_csv('data/sample_cnvkit.cns', sep='\t')
 
 app = dash.Dash(__name__)
+server = app.server
 app.layout = layout(cnr)
 
 update_callback(app, cnr, seg)
