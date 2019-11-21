@@ -11,9 +11,9 @@ def layout(cnr):
 
         html.Div(dcc.Markdown('''
             Developed an application for interactive Genome-wide copy number
-            plot from cnvkit to explore in detailed. Dash is a python
-            framework which is being used to build this application. This scatter 
-            plot has bin-level log2 coverages and segmentation calls(lines) together.
+            plot from cnvkit. Dash is a python framework which is being used 
+            to build this application. This scatter plot has bin-level log2 
+            coverages and segmentation calls(lines) together.
 
             Dash-datatable has been used to create interactive table which
             is shown below. It has multiple options, we can select and
@@ -21,18 +21,21 @@ def layout(cnr):
             filtered data.
 
             ### How To Use Filters:
-             - Each column has filter text box. we can use relational
+             - Each column has filter text-box. we can use relational
              operators to filter numeric values ( <, >, =). we have to
              type values and press enter to trigger the filter action.
-             - Chromosome, start, end, depth and log2 columns have numeric values.
-             - Gene column has values as string, so simply we can use gene
-             names to filter values.
+             - Chromosome, start, end, depth and log2 columns have numeric
+             values. i.e: (for log2 column - >0 rows greater than o or <0
+             rows less than 0)
+             - Gene column values are strings, so simply we can use gene
+             names to filter values. i.e : PTEN, Plot and Table will be
+             showing only rows with PTEN.
              - If we want to highlight the regions which you are interested in,
              we can select those rows and those regions will be highlighted on
              the plot.
              - The plot will be updated on the flow while filtering the table.
         '''), style={'width': 750,
-                    'text-align': 'justify'}),
+                     'text-align': 'justify'}),
 
         html.Div(id='datatable-interactivity-container'),
 
